@@ -1,0 +1,8 @@
+<svg id="instagram" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <path id="Caminho_130" data-name="Caminho 130" d="M7.5,0h35A7.5,7.5,0,0,1,50,7.5v35A7.5,7.5,0,0,1,42.5,50H7.5A7.5,7.5,0,0,1,0,42.5V7.5A7.5,7.5,0,0,1,7.5,0Z" fill="#45d"/>
+  <g id="Grupo_6" data-name="Grupo 6">
+    <rect id="Retângulo_52" data-name="Retângulo 52" width="28.906" height="28.906" rx="7.617" transform="translate(10.547 10.547)" fill="none" stroke="#000" stroke-width="2.832"/>
+    <circle id="Elipse_14" data-name="Elipse 14" cx="6.738" cy="6.738" r="6.738" transform="translate(18.262 18.262)" fill="none" stroke="#000" stroke-width="2.832"/>
+  </g>
+  <circle id="Elipse_15" data-name="Elipse 15" cx="1.855" cy="1.855" r="1.855" transform="translate(31.641 14.648)"/>
+</svg>
