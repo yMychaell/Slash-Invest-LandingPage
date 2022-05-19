@@ -38,7 +38,7 @@
 
       <section class="bank">
         <div class="bank__container container">
-          <div class="bank__card text-left">
+          <div class="bank__card">
             <h3 class="subtitle">LCI 2018/12</h3>
             <h3 class="subtitle subtitle--blue">110% do CDB</h3>
             <p class="bank__name">Banco Ryder</p>
@@ -69,15 +69,15 @@
         </div>
       </section>
 
-      <section class="plataform">
-        <div class="container container--grid text-center">
-          <h1 class="heading__main">Mais fácil que gastar dinheiro</h1>
+      <section class="platform">
+        <div class="container platform__container--grid text-center">
+          <h1 class="platform__heading--center">Mais fácil que gastar dinheiro</h1>
 
           <div class="platform__card">
             <div>
               <img src="./assets/img/monitor-window.svg" alt="">
             </div>
-            <h3 class="plataform__subheading">Acesso Online</h3>
+            <h3 class="platform__subheading">Acesso Online</h3>
             <p>Acesse a nossa plataforma e escolha seu plano</p>
           </div>
 
@@ -98,7 +98,7 @@
             <p>Retire o rendimento e gaste parte em viagens e compras</p>
           </div>
 
-          <button class="btn--large">Entre em Contato</button>
+          <button class="btn--large platform__btn--large">Entre em Contato</button>
 
         </div>
       </section>
@@ -108,17 +108,18 @@
       </section>
 
       <section class="register">
-        <h1 class="heading__main">Crie a sua conta</h1>
+        <h1 class="heading__main text-center">Crie a sua conta</h1>
         <div class="register__container container">
           <form>
-            <label for="name">Nome
+            <label for="name">Nome <br>
               <input type="text" name="name" placeholder="Digite seu nome completo" required="required">
             </label>
-            <label for="email">Email
+            <label for="email">Email <br>
               <input type="email" name="email" placeholder="exemplo@gmail.com" required="required">
             </label>
 
-            <button class="btn--large">Iniciar Cadastro</button>
+          <button class="form__btn--large">Iniciar Cadastro</button>
+
           </form>
 
           <div>
@@ -133,26 +134,30 @@
 
     <footer class="footer">
 
+        <h3>Mapa do site</h3>
         <div class="footer__site__map">
-          <h3>Mapa do site</h3>
-          <ul>
+
+          <ul id="social__col--1">
             <li><a href="#">Home</a></li>
             <li><a href="#">Investir</a></li>
             <li><a href="#">Serviços</a></li>
+          </ul>
+          <ul id="social__col--2">
             <li><a href="#">Conta</a></li>
             <li><a href="#">Termos</a></li>
             <li><a href="#">Contato</a></li>
           </ul>
         </div>
 
+        <h3>Redes Socias</h3>
         <div class="footer__socials">
-          <h3>Redes Socias</h3>
           <a href="#"><img src="./assets/img/socials/facebook.svg" alt=""></a>
           <a href="#"><img src="./assets/img/socials/twitter.svg" alt=""></a>
-          <a href="#"><img src="./assets/img/socials/instagram.svg.svg.svg" alt=""></a>
+          <a href="#"><img src="./assets/img/socials/instagram.svg" alt=""></a>
           <a href="#"><img src="./assets/img/socials/youtube.svg" alt=""></a>
         </div>
 
+        <h3>Sobre</h3>
         <div class="footer__about">
           <p>A little invest é uma empresa de investimentos criada para facilitar a vida de investidores. Com ela você investe rapidamente o seu dinheiro.</p>
         </div>
