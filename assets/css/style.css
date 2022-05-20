@@ -40,19 +40,69 @@ ul {
 
 header {
   background-color: var(--clr-light-gray);
+  
   display: flex;
   align-items: center;
-  height: 4.375em;
+  height: 4.375rem;
+}
+
+.container__menu {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .logo {
+  cursor: pointer;
+  padding: .225em;
   font-size: 1.2em;
   font-weight: bold;
 }
 
 .navbar__menu {
-  display: none;
+  background-color: var(--clr-light-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 0;
+  overflow-y: hidden;
+  padding-top: 1.5em;
+  position: absolute;
+  right: 0;
+  transition: .6s ease;
+  top: 4.375rem;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar__menu li {
+  margin: .825rem 0;
+  padding: .25em 0;
+}
+
+.navbar__menu li a {
+  color: var(--clr-dark);
+  font-size: 1.1em;
+  padding: .625em 0;
+}
+
+.navbar__menu .navbar__menu__btn--register {
+  border-bottom: 2px solid rgba(0,0,0, .30);
+  color: var(--clr-main-blue);
+  font-weight: 500;
+}
+
+.navbar.mobile .navbar__menu {
+  height: calc(100vh - 4.375rem);
+  visibility: visible;
+}
+
+#btn--menu {
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: .525em;
 }
 
 .container {
@@ -105,7 +155,7 @@ header {
   padding: 1em 0 2.5em;
 }
 
-.bank .bank__card {
+.bank__container .bank__card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,27 +165,27 @@ header {
   box-shadow: 0 .125em .25em #00000029;
   margin: 1.5rem auto 0 auto;
   padding: 1em 0;
-  /* width: min(100%, 300px); */
+  width: min(100%, 540px);
 }
 
 .bank__card > * {
   padding: 0 1em;
 }
 
-.bank .bank__name {
+.bank__card .bank__name {
   color: var(--clr-medium-gray);
   font-size: 1.125em;
   font-weight: 400;
   margin-top: .325rem;
 }
 
-.bank .bank__btn {
+.bank__card .bank__btn {
   background-color: var(--clr-main-blue);
+  text-align: center;
   border-radius: .25em;
   color: white;
   cursor: pointer;
   font-size: 1em;
-  font-weight: 500;
   margin-top: 1rem;
   margin-inline: auto;
   padding: .625em;
@@ -299,5 +349,77 @@ header {
   font-weight: 400;
   margin-top: 1rem;
   padding: .625em;
+}
+
+@media (min-width: 37em) {
+
+  .bank__container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 1.2em;
+  }
+
+  .bank__container .bank__card {
+    padding: 1.5em 0;
+    margin: 0;
+  }
+
+  .subtitle {
+    font-size: 1.25em;
+  }
+
+  .bank__card .bank__name {
+    font-size: 1.125em;
+  }
+
+  .bank__card .bank__btn {
+    font-size: 1em;
+    font-weight: 400;
+    width: 13em;
+  }
+
+  .platform__container--grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50%) 1fr;
+    gap: 1em;
+  }
+
+  .platform__card {
+    margin-top: .625rem;
+    padding: 1em;
+  }
+
+  .platform__card .platform__card--flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .platform__card--flex img {
+    margin-right: 1rem;
+  }
+
+ .platform__card:nth-of-type(3) {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+
+  .platform {
+    width: 100%;
+  }
+
+  .platform__btn--center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .platform__btn--center .platform__btn--large {
+    margin: 1.5rem 0;
+  }
+
 }
 
