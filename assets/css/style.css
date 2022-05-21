@@ -19,6 +19,7 @@
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 400;
+  background-color: #fff;
 }
 
 a {
@@ -90,6 +91,7 @@ header {
 
 .navbar__menu .navbar__menu__btn--register {
   border-bottom: 2px solid rgba(0,0,0, .30);
+  border-radius: .25em;
   color: var(--clr-main-blue);
   font-weight: 500;
 }
@@ -136,6 +138,7 @@ header {
 
 .btn--large {
   background-color: var(--clr-main-blue);
+  border-radius: .25em;
   color: white;
   cursor: pointer;
   display: inline-block;
@@ -203,7 +206,7 @@ header {
 .platform__heading--center {
   font-size: 2em;
   font-weight: 600;
-  margin-top: 2.5rem;
+  margin: 3rem 0;
   text-align: center;
 }
 
@@ -222,18 +225,23 @@ header {
 }
 
 .platform__card img {
-  width: min(100%, 340px);
+  width: min(100%, 18.75em);
 }
 
-.platform__container--grid .platform__btn--large{
+.platform .platform__btn--large{
   font-size: 1em;
   font-weight: 400;
-  margin: 1rem 0;
-  width: 15em;
+  margin-top: 2rem;
+}
+
+.platform__btn--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .quote {
-  margin: 1rem 0;
+  margin: 3rem 0;
 }
 
 .register__container form {
@@ -242,7 +250,7 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding: 1.5em 0;
 }
 
@@ -263,8 +271,9 @@ header {
   width: 15em;
 }
 
-.register__container .form__btn--large {
+.register__container .register__form__btn--large {
   background-color: var(--clr-main-blue);
+  border-radius: .25em;
   color: white;
   cursor: pointer;
   font-weight: 600;
@@ -286,7 +295,7 @@ header {
 }
 
 .register__container img {
-  width: min(100%, 340px);
+  width: min(100%, 18.75em);
 }
 
 .footer {
@@ -407,18 +416,91 @@ header {
     grid-row: 2;
   }
 
-  .platform {
-    width: 100%;
+  .platform__card:nth-of-type(3) p {
+    margin: 0 auto; 
+    width: min(100%, 20em);
   }
 
-  .platform__btn--center {
+  .platform .platform__btn--large {
+    text-align: center;
+    padding: .725em 0;
+    width: 14em;
+  }
+
+  .register .register__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1em;
+  }
+
+  .register__container form {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
 
-  .platform__btn--center .platform__btn--large {
-    margin: 1.5rem 0;
+  .register__container .register__form__btn--large {
+    margin: 0;
+  }
+
+  .register__container .register__suport {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .register__suport p {
+    margin-top: .625rem;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__container__map .footer__container__col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__map__col--1 {
+    margin-left: 1rem;
+  }
+
+  .footer__map__col--1 li,
+  .footer__map__col--2 li {
+    margin-bottom: .625rem;
+  }
+
+  .footer__map__col--1 li a,
+  .footer__map__col--2 li a {
+    color: var(--clr-medium-gray);
+    padding: .325em 0;
+  }
+
+  .footer .footer__socials {
+    display: block;
+    text-align: center;
+  }
+
+  .footer__socials a {
+    margin: 0 .325rem;
+  }
+
+  .footer .footer__about {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    margin-bottom: .625rem;
+    margin-top: 0;
+  }
+
+  .footer .footer__copyright {
+    grid-column: 1 / 3;
+    margin-top: .625rem;
+    text-align: center;
+  }
+
+  .footer__copyright p {
+    margin-top: 0;
   }
 
 }
