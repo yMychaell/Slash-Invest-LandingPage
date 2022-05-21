@@ -155,7 +155,7 @@ header {
 }
 
 .bank .bank__container {
-  padding: 1em 0 2.5em;
+  padding:2.5em;
 }
 
 .bank__container .bank__card {
@@ -192,7 +192,7 @@ header {
   margin-top: 1rem;
   margin-inline: auto;
   padding: .625em;
-  width: 15em;
+  width: min(80%, 15em);
 }
 
 .platform__card {
@@ -306,12 +306,33 @@ header {
 }
 
 .footer h3{
+  font-weight: 400;
   margin: 1rem;
 }
 
 .footer .footer__site__map {
   display: flex;
   align-items: center;
+}
+
+.footer__container__map .footer__container__col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.footer__map__col--1 {
+  margin-left: 1rem;
+}
+
+.footer__map__col--1 li,
+.footer__map__col--2 li {
+  margin-bottom: .625rem;
+}
+
+.footer__map__col--1 li a,
+.footer__map__col--2 li a {
+  color: var(--clr-medium-gray);
+  padding: .325em 0;
 }
 
 .footer__site__map {
@@ -328,7 +349,7 @@ header {
   margin-right: 2rem;
 }
 
-.footer .footer__socials {
+.footer .footer__socials--item {
   display: flex;
   align-items: center;
   margin: 0 1rem;
@@ -361,6 +382,21 @@ header {
 }
 
 @media (min-width: 37em) {
+
+
+  .intro .intro__container--flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .intro__container--grid .heading__main--intro {
+    margin-top: 0;
+  }
+
+  .bank {
+    margin-top: 2.5rem;
+  }
 
   .bank__container {
     display: grid;
@@ -475,15 +511,6 @@ header {
   .footer__map__col--2 li a {
     color: var(--clr-medium-gray);
     padding: .325em 0;
-  }
-
-  .footer .footer__socials {
-    display: block;
-    text-align: center;
-  }
-
-  .footer__socials a {
-    margin: 0 .325rem;
   }
 
   .footer .footer__about {
