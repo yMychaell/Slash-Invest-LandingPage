@@ -155,7 +155,7 @@ header {
 }
 
 .bank .bank__container {
-  padding:2.5em;
+  padding: 2em .625em;
 }
 
 .bank__container .bank__card {
@@ -169,6 +169,10 @@ header {
   margin: 1.5rem auto 0 auto;
   padding: 1em 0;
   width: min(100%, 540px);
+}
+
+.bank__card:last-child {
+  margin-bottom: 1rem;
 }
 
 .bank__card > * {
@@ -525,7 +529,7 @@ header {
     inset: 0;
     padding: 0;
     position: relative;
-    transition: .3s ease;
+    transition: none;
   }
 
   .navbar__menu li {
@@ -566,5 +570,71 @@ header {
     color: #fff;
   }
 
+  .intro .intro__container--flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .bank .bank__container {
+    grid-template-columns: repeat(4, 25%);
+    width: 100%;
+  }
+
+  .bank__container .bank__card {
+    width: min(100%, 300px);
+    padding:1em;
+  }
+
+  .bank__card .bank__btn {
+    width: min(100%, 14em);
+  }
+
+  .platform .platform__container--grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .platform__card .platform__card--flex {
+    display: block;
+  }
+
+  .platform__card {
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+  }
+
+ .platform__card:nth-of-type(3) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .platform__card:nth-of-type(3) p {
+    width: 100%;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer .footer__about {
+    grid-column: 3;
+    grid-row: 1;
+    margin-bottom: .625rem;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .footer .footer__copyright {
+    grid-column: 1 / 4;
+    margin-top: .625rem;
+    text-align: center;
+  }
+
+  .footer__copyright p {
+    text-align: left;
+    margin-top: 0;
+  }
 }
 
