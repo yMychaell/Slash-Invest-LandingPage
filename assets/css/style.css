@@ -71,7 +71,7 @@ header {
   padding-top: 1.5em;
   position: absolute;
   right: 0;
-  transition: .6s ease;
+  transition: height .6s ease-in-out;
   top: 4.375rem;
   visibility: hidden;
   width: 100%;
@@ -101,7 +101,7 @@ header {
   visibility: visible;
 }
 
-#btn--menu {
+.navbar #btn--menu {
   cursor: pointer;
   font-size: 1.2em;
   padding: .525em;
@@ -513,6 +513,12 @@ header {
 
 @media (min-width: 60em) {
 
+  .intro .heading__main--intro {
+    font-size: 2.625em;
+    line-height: 1.2;
+    width: 25rem;
+  }
+
   #btn--menu {
     display: none;
   }
@@ -578,7 +584,6 @@ header {
 
   .bank .bank__container {
     grid-template-columns: repeat(4, 25%);
-    width: 100%;
   }
 
   .bank__container .bank__card {
