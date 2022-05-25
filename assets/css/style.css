@@ -71,7 +71,7 @@ header {
   padding-top: 1.5em;
   position: absolute;
   right: 0;
-  transition: height .6s ease-in-out;
+  transition: height .6s ease;
   top: 4.375rem;
   visibility: hidden;
   width: 100%;
@@ -85,7 +85,8 @@ header {
 
 .navbar__menu li a {
   color: var(--clr-dark);
-  font-size: 1.1em;
+  font-size: 1.125em;
+  font-weight: 400;
   padding: .625em 0;
 }
 
@@ -155,7 +156,7 @@ header {
 }
 
 .bank .bank__container {
-  padding: 2em .625em;
+  padding: 3em .625em;
 }
 
 .bank__container .bank__card {
@@ -252,16 +253,17 @@ header {
   background-color: var(--clr-light-gray);
   border-radius: .25em;
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-top: 2rem;
-  padding: 1.5em 0;
+  padding: 1.5em;
 }
 
 .register__container form label {
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 500;
-  margin: .625rem 1rem;
+  margin: .625rem;
 }
 
 .register__container form input {
@@ -269,7 +271,8 @@ header {
   border: none;
   background-color: #D3D3D3;
   color: black;
-  margin-top: .625rem;
+  font-size: .875em;
+  margin-top: .325rem;
   padding: .625em .525em;
   outline: none;
   width: 15em;
@@ -280,22 +283,22 @@ header {
   border-radius: .25em;
   color: white;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 400;
   margin-top: .625rem;
-  margin-left: 1rem;
-  padding: .825em 0;
-  width: 15em;
+  padding: .625em 0;
+  text-align: center;
+  width: 14.8em;
 }
 
-.register__container div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.register__container div p {
+.register__suport {
+  margin-top: 1rem;
+  font-size: 1em;
   font-weight: 500;
-  margin-left: .625rem;
+  text-align: center;
+}
+
+.register__suport p {
+  margin-top: .625rem;
 }
 
 .register__container img {
@@ -357,6 +360,7 @@ header {
 }
 
 .footer__about {
+  color: var(--clr-medium-gray);
   font-weight: 300;
   line-height: 1.4;
   margin-top: 1rem;
@@ -364,6 +368,7 @@ header {
 }
 
 .footer__about h3 {
+  color: #fff;
   margin: .625rem 0;
 }
 
@@ -463,8 +468,10 @@ header {
 
   .register .register__container {
     display: grid;
+    justify-content: space-between;
+    align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 1em;
+    column-gap: 2rem;
   }
 
   .register__container form {
@@ -480,6 +487,11 @@ header {
   .register__container .register__suport {
     display: flex;
     flex-direction: column;
+    text-align: center;
+  }
+
+  .register__suport img {
+    align-self: center;
   }
 
   .register__suport p {
@@ -582,8 +594,24 @@ header {
     justify-content: space-between;
   }
 
+  .intro__container--flex .btn--large {
+    font-size: 1.125em;
+    font-weight: 400;
+    padding: .8em 0;
+    text-align: center;
+    transition: all ease;
+    width: 12.5rem;
+  }
+
+  .btn--large:hover,
+  .bank__btn:hover,
+  .register__form__btn--large:hover {
+    transform: scale(.97);
+  }
+
   .bank .bank__container {
     grid-template-columns: repeat(4, 25%);
+    column-gap: 2em;
   }
 
   .bank__container .bank__card {
@@ -603,10 +631,22 @@ header {
     display: block;
   }
 
+  .platform  .platform__heading--center {
+    margin-top: 4rem;
+  }
+
   .platform__card {
     background-color: #fff;
     border: none;
     box-shadow: none;
+  }
+  
+  .platform .platform__heading--center {
+    font-size: 2.5em;
+  }
+
+  .platform__card p {
+    font-size: 1.2em;
   }
 
  .platform__card:nth-of-type(3) {
@@ -618,9 +658,66 @@ header {
     width: 100%;
   }
 
+   .platform .platform__btn--large {
+    font-size: 1.125em;
+    width: 12.5rem;
+  }
+
   .footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .register .register__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .register .heading__main {
+    font-size: 2.5em;
+  }
+
+  .register__container form {
+    border-radius: .25em;
+    padding: 3em 0;
+    width: 500px;
+  }
+
+  .register .register__container label {
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+
+  .register .register__container input {
+    color: black;
+    font-size: .875em;
+    font-weight: 400;
+    margin-top: .325rem;
+    padding: .7em;
+    width: 18.75rem;
+  }
+
+  .register .register__form__btn--large {
+    align-self: flex-start;
+    font-size: 1em;
+    font-weight: 400;
+    margin-top: .9rem;
+    margin-left: 6.3rem;
+    padding: .625em;
+    text-align: center;
+    width: 12.5rem;
+  }
+
+  .register__suport p {
+    margin-top: 1rem;
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+
+  .footer h3 {
+    font-size: 1.2em;
+    margin-bottom: 1rem;
   }
 
   .footer .footer__about {
@@ -638,8 +735,14 @@ header {
   }
 
   .footer__copyright p {
+    font-size: 1em;
+    font-weight: 300;
     text-align: left;
     margin-top: 0;
+  }
+
+  .footer__container__col li a:hover {
+    color: var(--clr-main-blue);
   }
 }
 
