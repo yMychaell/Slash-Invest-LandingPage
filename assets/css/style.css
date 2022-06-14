@@ -54,33 +54,33 @@ header {
 }
 
 .logo {
+  color: var(--clr-main-blue);
   cursor: pointer;
   padding: .225em;
   font-size: 1.2em;
   font-weight: bold;
 }
 
-.navbar__menu {
-  background-color: var(--clr-light-gray);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 0;
-  overflow-y: hidden;
-  padding-top: 1.5em;
-  position: absolute;
-  right: 0;
-  transition: height .6s ease;
-  top: 4.375rem;
-  visibility: hidden;
-  width: 100%;
-  z-index: 1000;
+@media screen and (max-width: 60rem) {
+
+  .navbar__menu {
+    background-color: var(--clr-light-gray);
+    height: 0;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0;
+    transition: all .6s ease;
+    text-align: center;
+    top: 4.375rem;
+    width: 100%;
+    z-index: 1000;
+  }
+
 }
 
 .navbar__menu li {
   margin: .825rem 0;
-  padding: .25em 0;
+  padding: 1.75em 0 0;
 }
 
 .navbar__menu li a {
@@ -88,6 +88,10 @@ header {
   font-size: 1.125em;
   font-weight: 400;
   padding: .625em 0;
+}
+
+.navbar__menu li a:hover {
+  color: var(--clr-main-blue);
 }
 
 .navbar__menu .navbar__menu__btn--register {
@@ -99,7 +103,6 @@ header {
 
 .navbar.mobile .navbar__menu {
   height: calc(100vh - 4.375rem);
-  visibility: visible;
 }
 
 .navbar #btn--menu {
@@ -309,7 +312,7 @@ header {
   background-color: var(--clr-dark);
   color: white;
   margin-top: 2.5rem;
-  padding: .625em 0;
+  padding: .625em 0 0;
 }
 
 .footer h3{
@@ -388,7 +391,8 @@ header {
 
 
   .intro .intro__container--flex {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: space-between;
   }
@@ -535,23 +539,21 @@ header {
     display: none;
   }
 
-  .navbar .navbar__menu {
-    visibility: visible;
-  }
-
   .navbar__menu {
     display: flex;
     align-items: center;
     flex-direction: row;
-    height: 100%;
     inset: 0;
     padding: 0;
     position: relative;
-    transition: none;
   }
 
   .navbar__menu li {
     margin-left: .625rem;
+  }
+
+  .navbar__menu li {
+    padding: 0;
   }
 
   .navbar__menu li a {
@@ -735,7 +737,7 @@ header {
   }
 
   .footer__copyright p {
-    font-size: 1em;
+    font-size: .825em;
     font-weight: 300;
     text-align: left;
     margin-top: 0;
